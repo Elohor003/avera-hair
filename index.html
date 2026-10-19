@@ -3,618 +3,1321 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#11110f">
-<meta name="description" content="Discover Avéra Hair . Luxury hair, timeless beauty and your signature look.">
-<title>Avéra Hair  | Luxury Hair, Confident You</title>
+<meta name="theme-color" content="#11100e">
+<meta name="description" content="Discover AVÉRA HAIR — luxury wigs, bundles, closures and frontals. Find your signature look.">
+<title>AVÉRA HAIR | Your Crown, Your Way</title>
 
 <style>
 :root {
---black: #11110f;
---cream: #f8f5ef;
---ivory: #eee8dc;
---gold: #c4a36a;
---muted: #777166;
+--black: #11100e;
+--black-soft: #1b1916;
+--cream: #f7f3eb;
+--ivory: #eee7db;
+--gold: #c5a46d;
+--gold-light: #dfc89c;
+--muted: #a9a298;
+--white: #fffdf8;
+--border: rgba(197, 164, 109, .28);
 }
 
-* { box-sizing: border-box; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-html {
-scroll-behavior: smooth;
-scroll-padding-top: 85px;
-}
+html { scroll-behavior: smooth; }
 
 body {
-margin: 0;
 background: var(--cream);
 color: var(--black);
-font-family: Arial, sans-serif;
+font-family: Arial, Helvetica, sans-serif;
 line-height: 1.6;
 }
 
+button, input, select, textarea { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
 a { color: inherit; text-decoration: none; }
+button { cursor: pointer; }
+img { display: block; max-width: 100%; }
 
 .announcement {
-background: var(--black);
-color: white;
+padding: 9px 15px;
 text-align: center;
-padding: 9px;
+background: var(--gold);
+color: var(--black);
 font-size: 10px;
 letter-spacing: 2px;
 text-transform: uppercase;
 }
 
 header {
-height: 76px;
-padding: 0 7%;
+position: sticky;
+top: 0;
+z-index: 20;
+background: rgba(17, 16, 14, .97);
+color: var(--cream);
+border-bottom: 1px solid var(--border);
+}
+
+.nav {
+max-width: 1240px;
+min-height: 78px;
+padding: 15px 5%;
+margin: auto;
 display: flex;
 justify-content: space-between;
 align-items: center;
-position: sticky;
-top: 0;
-z-index: 10;
-background: var(--cream);
-border-bottom: 1px solid #e5dfd4;
+gap: 20px;
 }
 
 .logo {
-font: 28px Georgia, serif;
-letter-spacing: 5px;
+font-family: Georgia, "Times New Roman", serif;
+font-size: 25px;
+letter-spacing: 4px;
+color: var(--white);
+white-space: nowrap;
 }
 
 .logo span { color: var(--gold); }
 
-nav {
+.nav-links {
 display: flex;
 align-items: center;
-gap: 25px;
-}
-
-nav a {
-font-size: 10px;
-letter-spacing: 1.5px;
+gap: 26px;
+font-size: 11px;
+letter-spacing: 1px;
 text-transform: uppercase;
 }
 
-nav a:hover { color: #a48650; }
+.nav-links a:hover { color: var(--gold-light); }
 
-.menu-button {
-display: none;
-background: none;
-border: none;
-font-size: 25px;
+.bag-button {
+background: transparent;
+color: var(--cream);
+border: 1px solid var(--gold);
+padding: 10px 14px;
+font-size: 11px;
+letter-spacing: 1px;
+white-space: nowrap;
+}
+
+.hero {
+min-height: 570px;
+padding: 80px 7%;
+background:
+radial-gradient(ellipse at 80% 50%, rgba(197,164,109,.17), transparent 45%),
+linear-gradient(115deg, #11100e 0%, #211d18 65%, #30271d 100%);
+color: var(--cream);
+display: grid;
+grid-template-columns: 1.1fr .9fr;
+align-items: center;
+gap: 45px;
+}
+
+.eyebrow {
+color: var(--gold);
+font-size: 10px;
+letter-spacing: 4px;
+text-transform: uppercase;
+margin-bottom: 20px;
+}
+
+.hero h1 {
+font-family: Georgia, "Times New Roman", serif;
+font-weight: normal;
+font-size: clamp(43px, 6vw, 76px);
+line-height: 1.06;
+margin-bottom: 24px;
+max-width: 650px;
+}
+
+.hero h1 em {
+color: var(--gold-light);
+font-weight: normal;
+}
+
+.hero-copy {
+max-width: 450px;
+color: #d0c8bb;
+font-size: 14px;
+margin-bottom: 30px;
 }
 
 .button {
 display: inline-block;
-padding: 14px 22px;
-background: var(--black);
-color: white;
-border: 1px solid var(--black);
+border: 1px solid var(--gold);
+padding: 14px 23px;
 text-align: center;
 font-size: 10px;
-letter-spacing: 1.5px;
+letter-spacing: 2px;
 text-transform: uppercase;
 transition: .2s;
 }
 
-.button:hover {
+.button-gold {
 background: var(--gold);
 color: var(--black);
-border-color: var(--gold);
 }
 
-.outline {
-background: transparent;
+.button-gold:hover { background: var(--gold-light); }
+
+.button-outline {
+color: var(--cream);
+margin-left: 9px;
+}
+
+.button-outline:hover {
+background: var(--cream);
 color: var(--black);
 }
 
-.hero {
-display: grid;
-grid-template-columns: 1fr 1fr;
-min-height: 570px;
-background: var(--ivory);
-}
-
-.hero-copy {
-padding: 75px 10% 75px 13%;
+.hero-art {
+min-height: 350px;
 display: flex;
-flex-direction: column;
-align-items: flex-start;
+align-items: center;
 justify-content: center;
+position: relative;
+overflow: hidden;
+border: 1px solid var(--border);
+background:
+radial-gradient(ellipse at 50% 40%, #4a3826 0%, #292018 36%, #15130f 75%);
 }
 
-.eyebrow {
-color: #987849;
+.hero-art::before {
+content: "A";
+font-family: Georgia, serif;
+font-size: clamp(180px, 28vw, 330px);
+color: rgba(223,200,156,.12);
+line-height: 1;
+}
+
+.hero-art-label {
+position: absolute;
+bottom: 24px;
+left: 20px;
+right: 20px;
+text-align: center;
+color: var(--gold-light);
+letter-spacing: 4px;
 font-size: 10px;
-letter-spacing: 3px;
-text-transform: uppercase;
-}
-
-h1, h2, h3 {
-font-family: Georgia, "Times New Roman", serif;
-font-weight: normal;
-}
-
-h1 {
-font-size: clamp(48px, 5.5vw, 76px);
-line-height: 1.08;
-letter-spacing: -2px;
-margin: 12px 0 22px;
-}
-
-h1 em { color: #a48650; }
-
-.hero-copy > p:not(.eyebrow) {
-max-width: 380px;
-font-size: 14px;
-color: #69645c;
-}
-
-.hero-actions {
-display: flex;
-flex-wrap: wrap;
-gap: 10px;
-margin-top: 18px;
-}
-
-.hero-image {
-min-height: 450px;
-background: #d9cabb url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85") center 35% / cover no-repeat;
 }
 
 .benefits {
-background: var(--black);
-color: var(--cream);
 display: grid;
 grid-template-columns: repeat(3, 1fr);
+background: var(--black-soft);
+color: var(--cream);
+padding: 25px 5%;
 text-align: center;
-padding: 23px 4%;
+gap: 20px;
 }
 
-.benefits div {
+.benefit strong {
+display: block;
+font-family: Georgia, serif;
+font-weight: normal;
+font-size: 17px;
+color: var(--gold-light);
+margin-bottom: 4px;
+}
+
+.benefit span {
+color: var(--muted);
 font-size: 10px;
-letter-spacing: 1.5px;
-text-transform: uppercase;
-padding: 8px;
+letter-spacing: 1px;
 }
 
-.section { padding: 85px 7%; }
+section { scroll-margin-top: 90px; }
+
+.section {
+max-width: 1240px;
+padding: 85px 5%;
+margin: auto;
+}
 
 .section-heading {
-max-width: 570px;
 text-align: center;
-margin: 0 auto 40px;
+margin-bottom: 42px;
 }
+
+.section-heading .eyebrow { margin-bottom: 10px; }
 
 .section-heading h2 {
-font-size: clamp(34px, 4vw, 48px);
-margin: 10px 0;
+font-family: Georgia, "Times New Roman", serif;
+font-weight: normal;
+font-size: clamp(30px, 4vw, 43px);
+line-height: 1.2;
 }
 
-.section-heading p:last-child {
-color: var(--muted);
+.section-heading p {
+color: #777066;
+max-width: 530px;
+margin: 13px auto 0;
 font-size: 13px;
 }
 
-.products {
+.collections {
 display: grid;
-grid-template-columns: repeat(3, minmax(0, 1fr));
-gap: 24px;
+grid-template-columns: repeat(3, 1fr);
+gap: 18px;
 }
 
-.product-image {
-aspect-ratio: 4 / 5;
-overflow: hidden;
-background: var(--ivory);
-}
-
-.product-image img {
-display: block;
-width: 100%;
-height: 100%;
-object-fit: cover;
-transition: transform .4s;
-}
-
-.product-card:hover img { transform: scale(1.04); }
-
-.product-info { padding-top: 13px; }
-
-.product-info h3 {
-font-size: 23px;
-margin: 0 0 5px;
-}
-
-.product-info p {
-color: var(--muted);
-font-size: 12px;
-margin: 0 0 14px;
-}
-
-.product-info .button { width: 100%; }
-
-.story {
-display: grid;
-grid-template-columns: 1fr 1fr;
-background: var(--ivory);
-}
-
-.story-image {
-min-height: 440px;
-background: #d9cabb url("https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=85") center 35% / cover no-repeat;
-}
-
-.story-copy {
-padding: 65px 12%;
+.collection-card {
+position: relative;
+min-height: 220px;
+padding: 25px;
 display: flex;
 flex-direction: column;
+justify-content: flex-end;
+overflow: hidden;
+background: linear-gradient(145deg, #4b3b2c, #1a1713 75%);
+color: var(--cream);
+border: 1px solid var(--border);
+}
+
+.collection-card:nth-child(2) {
+background: linear-gradient(145deg, #6b5540, #211a14 75%);
+}
+
+.collection-card:nth-child(3) {
+background: linear-gradient(145deg, #393431, #11100e 75%);
+}
+
+.collection-card:nth-child(4) {
+background: linear-gradient(145deg, #5a493c, #1b1713 75%);
+}
+
+.collection-card:nth-child(5) {
+background: linear-gradient(145deg, #76624c, #272019 75%);
+}
+
+.collection-card:nth-child(6) {
+background: linear-gradient(145deg, #41352c, #17130f 75%);
+}
+
+.collection-card::before {
+content: "AVÉRA";
+position: absolute;
+top: 15px;
+right: -5px;
+font-family: Georgia, serif;
+font-size: 48px;
+letter-spacing: 4px;
+color: rgba(255,255,255,.08);
+}
+
+.collection-card h3 {
+position: relative;
+font-family: Georgia, serif;
+font-size: 25px;
+font-weight: normal;
+}
+
+.collection-card p {
+position: relative;
+color: #d5cabb;
+font-size: 11px;
+margin: 5px 0 14px;
+}
+
+.collection-card button {
+position: relative;
+width: fit-content;
+border: none;
+border-bottom: 1px solid var(--gold);
+background: transparent;
+color: var(--gold-light);
+padding-bottom: 4px;
+font-size: 10px;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+.shop-section {
+background: var(--ivory);
+padding: 80px 0;
+}
+
+.shop-inner {
+max-width: 1240px;
+padding: 0 5%;
+margin: auto;
+}
+
+.filters {
+display: flex;
 justify-content: center;
-align-items: flex-start;
+gap: 9px;
+flex-wrap: wrap;
+margin-bottom: 30px;
 }
 
-.story-copy h2 {
-font-size: clamp(36px, 4vw, 50px);
-line-height: 1.15;
-margin: 10px 0 20px;
-}
-
-.story-copy p:not(.eyebrow) {
-font-size: 13px;
-color: #69645c;
-margin-bottom: 22px;
-}
-
-.care {
-background: var(--black);
-color: var(--cream);
-text-align: center;
-padding: 75px 20px;
-}
-
-.care h2, .contact h2 {
-font-size: clamp(34px, 4vw, 46px);
-margin: 0 0 15px;
-}
-
-.care p, .contact p {
-max-width: 480px;
-margin: 0 auto 25px;
-font-size: 13px;
-}
-
-.care p { color: #c9c2b7; }
-
-.care .button {
-background: var(--cream);
+.filter {
+background: transparent;
+border: 1px solid #c8bca9;
 color: var(--black);
-border-color: var(--cream);
-}
-
-.contact {
-text-align: center;
-padding: 80px 20px;
-}
-
-.contact p { color: var(--muted); }
-
-footer {
-background: var(--black);
-color: var(--cream);
-padding: 40px 7% 20px;
-}
-
-.footer-top {
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-gap: 25px;
-padding-bottom: 28px;
-}
-
-.footer-description {
-max-width: 280px;
-color: #c0b9ad;
-font-size: 12px;
-}
-
-.footer-links {
-display: flex;
-flex-wrap: wrap;
-gap: 20px;
-align-items: center;
-}
-
-.footer-links a {
+padding: 9px 14px;
 font-size: 10px;
 letter-spacing: 1px;
 text-transform: uppercase;
 }
 
-.footer-bottom {
-border-top: 1px solid #393832;
-padding-top: 18px;
-color: #aaa397;
-font-size: 10px;
+.filter.active, .filter:hover {
+background: var(--black);
+color: var(--cream);
+border-color: var(--black);
 }
+
+.product-grid {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 26px 18px;
+}
+
+.product-card { min-width: 0; }
+
+.product-image {
+position: relative;
+min-height: 260px;
+aspect-ratio: 4 / 4.5;
+background: linear-gradient(145deg, #d8cbbb, #b5a18a);
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.product-image img {
+width: 100%;
+height: 100%;
+position: absolute;
+inset: 0;
+object-fit: cover;
+}
+
+.image-placeholder {
+padding: 25px;
+text-align: center;
+color: #3a2d21;
+font-family: Georgia, serif;
+font-size: 24px;
+}
+
+.image-placeholder small {
+display: block;
+font-family: Arial, sans-serif;
+font-size: 9px;
+letter-spacing: 3px;
+margin-top: 10px;
+}
+
+.product-info { padding: 15px 2px; }
+
+.product-category {
+color: #85745e;
+text-transform: uppercase;
+font-size: 9px;
+letter-spacing: 2px;
+}
+
+.product-info h3 {
+font-family: Georgia, serif;
+font-size: 21px;
+font-weight: normal;
+margin: 4px 0;
+}
+
+.product-description {
+color: #6c665e;
+font-size: 12px;
+min-height: 38px;
+}
+
+.product-price {
+margin: 8px 0 13px;
+font-size: 12px;
+font-weight: bold;
+}
+
+.product-actions {
+display: flex;
+gap: 8px;
+}
+
+.product-actions button {
+flex: 1;
+padding: 11px 5px;
+border: 1px solid var(--black);
+background: transparent;
+color: var(--black);
+font-size: 9px;
+letter-spacing: 1px;
+text-transform: uppercase;
+}
+
+.product-actions button:first-child {
+background: var(--black);
+color: var(--cream);
+}
+
+.product-actions button:hover {
+background: var(--gold);
+border-color: var(--gold);
+color: var(--black);
+}
+
+.notice {
+margin-top: 25px;
+text-align: center;
+color: #6d655a;
+font-size: 12px;
+}
+
+.story {
+background: var(--black);
+color: var(--cream);
+}
+
+.story-inner {
+max-width: 1080px;
+margin: auto;
+padding: 85px 6%;
+display: grid;
+grid-template-columns: .75fr 1.25fr;
+gap: 55px;
+align-items: center;
+}
+
+.founder-photo {
+min-height: 310px;
+background: linear-gradient(145deg, #40352a, #191612);
+border: 1px solid var(--border);
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--gold-light);
+text-align: center;
+padding: 20px;
+font-family: Georgia, serif;
+font-size: 22px;
+}
+
+.founder-photo img {
+width: 100%;
+height: 100%;
+min-height: 310px;
+object-fit: cover;
+}
+
+.story h2 {
+font-family: Georgia, serif;
+font-weight: normal;
+font-size: clamp(32px, 4vw, 46px);
+line-height: 1.2;
+margin-bottom: 20px;
+}
+
+.story h2 em {
+color: var(--gold-light);
+font-weight: normal;
+}
+
+.story p {
+color: #c7bfb3;
+font-size: 13px;
+margin-bottom: 15px;
+}
+
+.contact-section {
+background: #e9e0d3;
+text-align: center;
+padding: 75px 5%;
+}
+
+.contact-section h2 {
+font-family: Georgia, serif;
+font-weight: normal;
+font-size: clamp(32px, 4vw, 44px);
+margin-bottom: 12px;
+}
+
+.contact-section > p {
+max-width: 500px;
+margin: 0 auto 25px;
+color: #6d655b;
+font-size: 13px;
+}
+
+.contact-buttons {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 12px;
+}
+
+.contact-buttons .button-outline {
+color: var(--black);
+margin-left: 0;
+border-color: var(--black);
+}
+
+.contact-buttons .button-outline:hover {
+background: var(--black);
+color: var(--cream);
+}
+
+footer {
+padding: 35px 5%;
+background: var(--black);
+color: var(--cream);
+text-align: center;
+}
+
+footer .logo { font-size: 21px; }
+
+footer p {
+color: var(--muted);
+font-size: 11px;
+margin-top: 12px;
+}
+
+.footer-links {
+display: flex;
+justify-content: center;
+gap: 22px;
+flex-wrap: wrap;
+margin-top: 18px;
+font-size: 11px;
+}
+
+.footer-links a:hover { color: var(--gold); }
+
+.cart-panel {
+position: fixed;
+z-index: 50;
+inset: 0;
+background: rgba(0,0,0,.6);
+display: none;
+justify-content: flex-end;
+}
+
+.cart-panel.open { display: flex; }
+
+.cart-content {
+width: min(440px, 100%);
+height: 100%;
+overflow-y: auto;
+background: var(--cream);
+padding: 26px;
+}
+
+.cart-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid #d5caba;
+padding-bottom: 18px;
+}
+
+.cart-header h2 {
+font-family: Georgia, serif;
+font-weight: normal;
+font-size: 28px;
+}
+
+.close-cart {
+background: transparent;
+border: none;
+font-size: 27px;
+}
+
+.cart-item {
+padding: 18px 0;
+border-bottom: 1px solid #d5caba;
+display: grid;
+grid-template-columns: 1fr auto;
+gap: 10px;
+}
+
+.cart-item strong { font-family: Georgia, serif; font-weight: normal; }
+
+.cart-item small {
+display: block;
+color: #72695e;
+font-size: 11px;
+margin-top: 5px;
+}
+
+.cart-item-controls {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-top: 10px;
+}
+
+.cart-item-controls button {
+border: 1px solid #c6b8a3;
+background: transparent;
+padding: 3px 9px;
+}
+
+.remove-item {
+border: none !important;
+text-decoration: underline;
+font-size: 11px;
+}
+
+.cart-empty {
+padding: 30px 0;
+color: #72695e;
+font-size: 13px;
+}
+
+.cart-total {
+margin: 20px 0;
+font-size: 13px;
+}
+
+.cart-total strong { font-size: 17px; }
+
+.checkout-form {
+display: grid;
+gap: 12px;
+margin-top: 25px;
+}
+
+.checkout-form h3 {
+font-family: Georgia, serif;
+font-weight: normal;
+font-size: 24px;
+}
+
+.checkout-form label {
+font-size: 11px;
+letter-spacing: .5px;
+}
+
+.checkout-form input,
+.checkout-form select,
+.checkout-form textarea {
+width: 100%;
+padding: 12px;
+border: 1px solid #c9bdac;
+background: white;
+color: var(--black);
+margin-top: 5px;
+}
+
+.checkout-form textarea {
+min-height: 75px;
+resize: vertical;
+}
+
+.checkout-form .button {
+width: 100%;
+background: var(--black);
+color: var(--cream);
+}
+
+.small-print {
+color: #746b60;
+font-size: 10px;
+line-height: 1.6;
+}
+
+.toast {
+position: fixed;
+bottom: 20px;
+left: 50%;
+transform: translateX(-50%);
+z-index: 60;
+display: none;
+max-width: 90%;
+padding: 13px 20px;
+background: var(--black);
+color: var(--cream);
+border: 1px solid var(--gold);
+font-size: 12px;
+text-align: center;
+}
+
+.toast.show { display: block; }
 
 @media (max-width: 760px) {
-header { padding: 0 5%; }
-
-.menu-button { display: block; }
-
-nav {
-display: none;
-position: absolute;
-top: 76px;
-left: 0;
-right: 0;
-background: var(--cream);
-padding: 18px 6% 25px;
-flex-direction: column;
-align-items: stretch;
-gap: 0;
-border-bottom: 1px solid #e5dfd4;
+.nav { flex-wrap: wrap; min-height: 68px; }
+.logo { font-size: 21px; }
+.nav-links {
+order: 3;
+width: 100%;
+justify-content: center;
+gap: 18px;
+padding-top: 8px;
+border-top: 1px solid var(--border);
+}
+.nav-links a { font-size: 9px; }
+.hero {
+grid-template-columns: 1fr;
+padding: 60px 6%;
+gap: 30px;
+}
+.hero-art { min-height: 220px; }
+.benefits { grid-template-columns: 1fr; gap: 17px; }
+.section { padding: 60px 5%; }
+.collections { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+.collection-card { min-height: 180px; padding: 16px; }
+.collection-card h3 { font-size: 20px; }
+.collection-card::before { font-size: 35px; }
+.product-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px 12px; }
+.product-image { min-height: 180px; }
+.product-info h3 { font-size: 18px; }
+.product-actions { flex-direction: column; }
+.story-inner { grid-template-columns: 1fr; gap: 30px; padding: 60px 6%; }
+.founder-photo, .founder-photo img { min-height: 250px; }
+.button { padding: 13px 15px; }
 }
 
-nav.open { display: flex; }
-
-nav a { padding: 12px 0; }
-
-.hero { grid-template-columns: 1fr; }
-
-.hero-copy { padding: 60px 7% 45px; }
-
-.hero-image { min-height: 360px; }
-
-.benefits { padding: 15px 2%; }
-
-.benefits div {
-font-size: 8px;
-letter-spacing: .5px;
-padding: 6px 3px;
-}
-
-.section { padding: 65px 5%; }
-
-.products {
-grid-template-columns: repeat(2, minmax(0, 1fr));
-gap: 25px 12px;
-}
-
-.product-info h3 { font-size: 20px; }
-
-.product-info .button {
-padding: 12px 5px;
-font-size: 9px;
-}
-
-.story { grid-template-columns: 1fr; }
-
-.story-image { min-height: 330px; }
-
-.story-copy { padding: 50px 7%; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-html { scroll-behavior: auto; }
-*, *::before, *::after { transition: none !important; }
+@media (max-width: 380px) {
+.nav-links { gap: 11px; }
+.nav-links a { font-size: 8px; }
+.collections { grid-template-columns: 1fr; }
+.product-grid { grid-template-columns: 1fr 1fr; }
+.product-image { min-height: 150px; }
 }
 </style>
 </head>
 
 <body>
 <div class="announcement">
-A signature look starts here · Worldwide enquiries welcome
+YOUR CROWN. YOUR WAY. &nbsp; | &nbsp; WELCOME TO AVÉRA HAIR
 </div>
 
 <header>
-<a class="logo" href="#home">AVÉRA HAIR<span>.</span></a>
+<nav class="nav">
+<a class="logo" href="#home" aria-label="AVÉRA HAIR home">AVÉRA <span>HAIR</span></a>
 
-<button class="menu-button" id="menuButton"
-aria-label="Open navigation" aria-expanded="false">☰</button>
-
-<nav id="navigation">
+<div class="nav-links">
 <a href="#home">Home</a>
-<a href="#shop">Shop Hair</a>
-<a href="#about">Our Story</a>
-<a href="#care">Hair Care</a>
-<a class="button" href="#contact">Enquire Now</a>
+<a href="#collections">Collections</a>
+<a href="#shop">Shop</a>
+<a href="#our-story">Our Story</a>
+<a href="#contact">Contact</a>
+</div>
+
+<button class="bag-button" id="openCart" type="button">
+BAG (<span id="bagCount">0</span>)
+</button>
 </nav>
 </header>
 
 <main>
 <section class="hero" id="home">
-<div class="hero-copy">
-<p class="eyebrow">Welcome to Avéra Hair</p>
-<h1>Luxury hair.<br><em>Confident you.</em></h1>
-<p>
-For the woman who knows her worth. Discover your next
-signature look with Avéra Hair , where timeless beauty
-meets effortless confidence.
+<div>
+<p class="eyebrow">The AVÉRA experience</p>
+<h1>Luxury hair.<br><em>Limitless you.</em></h1>
+<p class="hero-copy">
+Discover your next signature look with AVÉRA HAIR.
+Explore timeless textures, versatile styles and hair made
+to complement your individual beauty.
 </p>
-<div class="hero-actions">
-<a class="button" href="#shop">Explore the collection</a>
-<a class="button outline" href="#about">Our story</a>
+<a class="button button-gold" href="#shop">Explore the collection</a>
+<a class="button button-outline" href="#our-story">Our story</a>
+</div>
+
+<div class="hero-art" role="img" aria-label="AVÉRA HAIR luxury collection feature">
+<div class="hero-art-label">CONFIDENCE IN EVERY STRAND</div>
+</div>
+</section>
+
+<div class="benefits">
+<div class="benefit">
+<strong>Find Your Look</strong>
+<span>Styles for your personal expression</span>
+</div>
+<div class="benefit">
+<strong>Made About You</strong>
+<span>Explore lengths, textures and options</span>
+</div>
+<div class="benefit">
+<strong>Personal Assistance</strong>
+<span>Contact us for help with your order</span>
 </div>
 </div>
 
-<div class="hero-image" role="img"
-aria-label="Fashion editorial portrait"></div>
-</section>
-
-<section class="benefits">
-<div>✦ Carefully selected styles</div>
-<div>✦ Luxury-inspired beauty</div>
-<div>✦ Worldwide enquiries</div>
-</section>
-
-<section class="section" id="shop">
+<section class="section" id="collections">
 <div class="section-heading">
 <p class="eyebrow">Find your signature</p>
-<h2>The Hair Edit</h2>
-<p>
-Explore styles for every mood, from effortless everyday
-beauty to your next statement look. Contact us for
-available lengths, textures and prices.
-</p>
+<h2>Explore the edits</h2>
+<p>From sleek and polished to soft, flowing texture, discover the look that feels like you.</p>
 </div>
 
-<div class="products">
-<article class="product-card">
-<div class="product-image">
-<img
-src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=700&q=85"
-alt="Beauty editorial inspiration"
-loading="lazy">
-</div>
-<div class="product-info">
+<div class="collections">
+<article class="collection-card">
 <h3>Straight Edit</h3>
-<p>Sleek, timeless and effortlessly elegant.</p>
-<a class="button" href="#contact"
-data-product="Straight Edit">Enquire about this style</a>
-</div>
+<p>Sleek, classic and timeless.</p>
+<button type="button" data-filter="Straight">Explore edit ↗</button>
 </article>
-
-<article class="product-card">
-<div class="product-image">
-<img
-src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=700&q=85"
-alt="Hair and beauty editorial inspiration"
-loading="lazy">
-</div>
-<div class="product-info">
+<article class="collection-card">
 <h3>Body Wave Edit</h3>
-<p>Soft movement with a glamorous finish.</p>
-<a class="button" href="#contact"
-data-product="Body Wave Edit">Enquire about this style</a>
-</div>
+<p>Soft waves with effortless movement.</p>
+<button type="button" data-filter="Body Wave">Explore edit ↗</button>
 </article>
-
-<article class="product-card">
-<div class="product-image">
-<img
-src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=85"
-alt="Fashion and hair inspiration"
-loading="lazy">
-</div>
-<div class="product-info">
+<article class="collection-card">
 <h3>Signature Edit</h3>
-<p>Your look, your confidence, your moment.</p>
-<a class="button" href="#contact"
-data-product="Signature Edit">Enquire about this style</a>
-</div>
+<p>Discover your next statement look.</p>
+<button type="button" data-filter="Signature">Explore edit ↗</button>
+</article>
+<article class="collection-card">
+<h3>Bob Edit</h3>
+<p>Short, chic and confident.</p>
+<button type="button" data-filter="Bob">Explore edit ↗</button>
+</article>
+<article class="collection-card">
+<h3>Bundles</h3>
+<p>Build your look your way.</p>
+<button type="button" data-filter="Bundles">Explore edit ↗</button>
+</article>
+<article class="collection-card">
+<h3>Lace Essentials</h3>
+<p>Closures and frontals.</p>
+<button type="button" data-filter="Lace">Explore edit ↗</button>
 </article>
 </div>
 </section>
 
-<section class="story" id="about">
-<div class="story-image" role="img"
-aria-label="Beauty portrait"></div>
+<section class="shop-section" id="shop">
+<div class="shop-inner">
+<div class="section-heading">
+<p class="eyebrow">The collection</p>
+<h2>Find your next look</h2>
+<p>Choose a style to enquire about it. Final pricing and availability will be confirmed with you.</p>
+</div>
 
-<div class="story-copy">
-<p class="eyebrow">The Avéra philosophy</p>
-<h2>Beauty is personal.<br>Make it yours.</h2>
-<p>
-Avéra Hair was created for women who love expressing
-themselves through beauty. Our vision is to make finding
-your next look feel special, personal and effortless.
+<div class="filters" aria-label="Filter products">
+<button class="filter active" type="button" data-filter="All">All styles</button>
+<button class="filter" type="button" data-filter="Straight">Straight</button>
+<button class="filter" type="button" data-filter="Body Wave">Body Wave</button>
+<button class="filter" type="button" data-filter="Signature">Signature</button>
+<button class="filter" type="button" data-filter="Bob">Bob</button>
+<button class="filter" type="button" data-filter="Bundles">Bundles</button>
+<button class="filter" type="button" data-filter="Lace">Closures & Frontals</button>
+</div>
+
+<div class="product-grid" id="productGrid"></div>
+
+<p class="notice">
+Product prices, stock, specifications and delivery options are confirmed before payment.
 </p>
-<p>
-From everyday elegance to bold transformations, we want
-every Avéra experience to celebrate your individual style.
-</p>
-<a class="button" href="#shop">Discover Avéra</a>
 </div>
 </section>
 
-<section class="care" id="care">
-<p class="eyebrow">The finishing touch</p>
-<h2>Love your hair for longer.</h2>
+<section class="story" id="our-story">
+<div class="story-inner">
+<div class="founder-photo">
+<div>
+Founder portrait<br>
+<span style="font-family:Arial,sans-serif;font-size:10px;letter-spacing:2px;">YOUR PHOTO GOES HERE</span>
+</div>
+</div>
+
+<div>
+<p class="eyebrow">The story behind the brand</p>
+<h2>It started at <em>eight.</em></h2>
 <p>
-Every great look deserves thoughtful care. Contact us for
-guidance on maintaining your wig, storing it properly and
-keeping your style looking its best.
+My love for hair began when I was just eight years old.
+What started as a childhood love grew into a vision for
+a brand that celebrates beauty, self-expression and confidence.
 </p>
-<a class="button" href="#contact">Ask us about hair care</a>
+<p>
+AVÉRA HAIR is the beginning of that vision. Every style is
+an opportunity to express yourself, try something new and
+feel beautiful in your own way.
+</p>
+<p>
+This is more than a hairstyle. It is your crown, your way.
+</p>
+<a class="button button-gold" href="#shop">Discover AVÉRA</a>
+</div>
+</div>
 </section>
 
-<section class="contact" id="contact">
-<p class="eyebrow">Your Avéra journey starts here</p>
-<h2>Let's find your look.</h2>
+<section class="contact-section" id="contact">
+<p class="eyebrow">We're here to help</p>
+<h2>Your next look starts here.</h2>
 <p>
-Interested in a style, length or texture? Send us an
-enquiry and we'll help you explore the available options.
+Have a question about a style, length, lace option or order?
+Reach out to AVÉRA HAIR for personal assistance.
 </p>
-<a class="button"
-href="mailto:shopaverahair@gmail.com?subject=Avera%20Hair%20Enquiry"
-id="emailButton">Enquire by email</a>
-<p style="margin-top:18px;font-size:11px">
-Instagram and TikTok: @shopaverahair
-</p>
+
+<div class="contact-buttons">
+<a class="button button-gold" id="nigeriaContact" href="https://wa.me/2347064847605" target="_blank" rel="noopener">
+WhatsApp — Nigeria
+</a>
+<a class="button button-outline" id="canadaContact" href="tel:+16395252664">
+Call — Canada
+</a>
+<a class="button button-outline" href="https://www.instagram.com/shopaverahair/" target="_blank" rel="noopener">
+Instagram
+</a>
+<a class="button button-outline" href="https://www.tiktok.com/@shopaverahair" target="_blank" rel="noopener">
+TikTok
+</a>
+</div>
 </section>
 </main>
 
 <footer>
-<div class="footer-top">
-<div>
-<a class="logo" href="#home">AVÉRA<span>.</span></a>
-<p class="footer-description">
-Luxury hair. Confident you. Discover a look that feels
-unmistakably yours.
-</p>
-</div>
-
+<a class="logo" href="#home">AVÉRA <span>HAIR</span></a>
+<p>Your crown. Your way.</p>
 <div class="footer-links">
-<a href="#shop">Shop Hair</a>
-<a href="#about">Our Story</a>
-<a href="#care">Hair Care</a>
+<a href="#collections">Collections</a>
+<a href="#shop">Shop</a>
+<a href="#our-story">Our Story</a>
 <a href="#contact">Contact</a>
-<a href="https://www.tiktok.com/@shopaverahair"
-target="_blank" rel="noopener noreferrer">TikTok</a>
 </div>
-</div>
-
-<div class="footer-bottom">
-© <span id="year"></span> AVÉRA HAIR. All rights reserved.
-</div>
+<p>© <span id="year"></span> AVÉRA HAIR. All rights reserved.</p>
 </footer>
 
+<div class="cart-panel" id="cartPanel" aria-hidden="true">
+<div class="cart-content" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+<div class="cart-header">
+<h2 id="cartTitle">Your bag</h2>
+<button class="close-cart" id="closeCart" type="button" aria-label="Close bag">×</button>
+</div>
+
+<div id="cartItems"></div>
+
+<div class="cart-total">
+<strong>Pricing: to be confirmed</strong>
+<p class="small-print">We'll confirm product prices, availability, shipping and payment details with you before your order is finalised.</p>
+</div>
+
+<form class="checkout-form" id="checkoutForm">
+<h3>Order enquiry</h3>
+
+<label>
+Your name
+<input id="customerName" name="customerName" autocomplete="name" required placeholder="Full name">
+</label>
+
+<label>
+Email address
+<input id="customerEmail" name="customerEmail" type="email" autocomplete="email" required placeholder="you@example.com">
+</label>
+
+<label>
+Country
+<select id="customerCountry" name="customerCountry" required>
+<option value="">Choose your country</option>
+<option value="Canada">Canada</option>
+<option value="Nigeria">Nigeria</option>
+<option value="Other">Other</option>
+</select>
+</label>
+
+<label>
+Delivery city and address (optional)
+<textarea id="customerAddress" name="customerAddress" placeholder="Enter your delivery details"></textarea>
+</label>
+
+<label>
+Additional requests (optional)
+<textarea id="customerNotes" name="customerNotes" placeholder="Preferred length, colour, lace, or questions"></textarea>
+</label>
+
+<button class="button" type="submit">Continue with WhatsApp</button>
+<p class="small-print">
+This sends an order enquiry, not a payment. Please do not enter card details here.
+Your order is not confirmed until AVÉRA HAIR confirms the details with you.
+</p>
+</form>
+</div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
 <script>
-const menuButton = document.getElementById("menuButton");
-const navigation = document.getElementById("navigation");
+/*
+AVÉRA HAIR WEBSITE
+Update product details and image paths once your actual
+supplier photos, prices and stock information are ready.
+*/
 
-menuButton.addEventListener("click", () => {
-const isOpen = navigation.classList.toggle("open");
-menuButton.setAttribute("aria-expanded", String(isOpen));
-menuButton.setAttribute(
-"aria-label",
-isOpen ? "Close navigation" : "Open navigation"
+const products = [
+{
+id: 1, name: "The Classic Straight", category: "Straight",
+description: "A sleek, timeless straight-hair look.",
+image: "images/straight-wig.jpg"
+},
+{
+id: 2, name: "The Silky Straight", category: "Straight",
+description: "A polished style for everyday elegance.",
+image: "images/silky-straight.jpg"
+},
+{
+id: 3, name: "The Body Wave", category: "Body Wave",
+description: "Soft waves with natural-looking movement.",
+image: "images/body-wave.jpg"
+},
+{
+id: 4, name: "The Deep Wave", category: "Signature",
+description: "Defined waves for a statement look.",
+image: "images/deep-wave.jpg"
+},
+{
+id: 5, name: "The Signature Curl", category: "Signature",
+description: "A textured style full of personality.",
+image: "images/signature-curl.jpg"
+},
+{
+id: 6, name: "The Everyday Bob", category: "Bob",
+description: "A chic, easy-to-style short look.",
+image: "images/bob-wig.jpg"
+},
+{
+id: 7, name: "The Luxe Bob", category: "Bob",
+description: "A sleek silhouette with a refined finish.",
+image: "images/luxe-bob.jpg"
+},
+{
+id: 8, name: "The Loose Wave", category: "Body Wave",
+description: "Relaxed waves for a softer finish.",
+image: "images/loose-wave.jpg"
+},
+{
+id: 9, name: "The Bundle Edit", category: "Bundles",
+description: "Bundles for your custom hairstyle.",
+image: "images/hair-bundles.jpg"
+},
+{
+id: 10, name: "The Closure Edit", category: "Lace",
+description: "Closures for your desired finish.",
+image: "images/hair-closure.jpg"
+},
+{
+id: 11, name: "The Frontal Edit", category: "Lace",
+description: "Frontals for a versatile styling look.",
+image: "images/hair-frontal.jpg"
+},
+{
+id: 12, name: "The Glam Edit", category: "Signature",
+description: "A statement look for your next occasion.",
+image: "images/glam-wig.jpg"
+}
+];
+
+const cart = [];
+let activeFilter = "All";
+
+const productGrid = document.getElementById("productGrid");
+const cartPanel = document.getElementById("cartPanel");
+const cartItems = document.getElementById("cartItems");
+const bagCount = document.getElementById("bagCount");
+const toast = document.getElementById("toast");
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function showToast(message) {
+toast.textContent = message;
+toast.classList.add("show");
+window.clearTimeout(showToast.timer);
+showToast.timer = window.setTimeout(() => {
+toast.classList.remove("show");
+}, 2600);
+}
+
+function renderProducts() {
+const filtered = activeFilter === "All"
+? products
+: products.filter(product => product.category === activeFilter);
+
+productGrid.innerHTML = filtered.map(product => `
+<article class="product-card">
+<div class="product-image">
+<div class="image-placeholder">
+AVÉRA
+<small>${product.category.toUpperCase()} EDIT</small>
+</div>
+<img
+src="${product.image}"
+alt="${product.name} — AVÉRA HAIR"
+loading="lazy"
+onerror="this.style.display='none'"
+>
+</div>
+<div class="product-info">
+<p class="product-category">${product.category} Edit</p>
+<h3>${product.name}</h3>
+<p class="product-description">${product.description}</p>
+<p class="product-price">Price on request</p>
+<div class="product-actions">
+<button type="button" data-add="${product.id}">Add to bag</button>
+<button type="button" data-enquire="${product.id}">Enquire</button>
+</div>
+</div>
+</article>
+`).join("");
+
+document.querySelectorAll("[data-add]").forEach(button => {
+button.addEventListener("click", () => addToCart(Number(button.dataset.add)));
+});
+
+document.querySelectorAll("[data-enquire]").forEach(button => {
+button.addEventListener("click", () => enquireAbout(Number(button.dataset.enquire)));
+});
+}
+
+function setFilter(filter) {
+activeFilter = filter;
+document.querySelectorAll(".filter").forEach(button => {
+button.classList.toggle("active", button.dataset.filter === filter);
+});
+renderProducts();
+document.getElementById("shop").scrollIntoView({ behavior: "smooth" });
+}
+
+document.querySelectorAll("[data-filter]").forEach(button => {
+button.addEventListener("click", () => setFilter(button.dataset.filter));
+});
+
+function addToCart(productId) {
+const product = products.find(item => item.id === productId);
+if (!product) return;
+
+const existing = cart.find(item => item.id === productId);
+if (existing) {
+existing.quantity += 1;
+} else {
+cart.push({ ...product, quantity: 1 });
+}
+
+renderCart();
+showToast(product.name + " added to your bag.");
+}
+
+function renderCart() {
+const count = cart.reduce((total, item) => total + item.quantity, 0);
+bagCount.textContent = count;
+
+if (cart.length === 0) {
+cartItems.innerHTML = '<p class="cart-empty">Your bag is empty. Explore the collection to find your next look.</p>';
+return;
+}
+
+cartItems.innerHTML = cart.map(item => `
+<div class="cart-item">
+<div>
+<strong>${item.name}</strong>
+<small>${item.category} · Price to be confirmed</small>
+<div class="cart-item-controls">
+<button type="button" data-decrease="${item.id}" aria-label="Decrease quantity">−</button>
+<span>${item.quantity}</span>
+<button type="button" data-increase="${item.id}" aria-label="Increase quantity">+</button>
+<button type="button" class="remove-item" data-remove="${item.id}">Remove</button>
+</div>
+</div>
+</div>
+`).join("");
+
+cartItems.querySelectorAll("[data-increase]").forEach(button => {
+button.addEventListener("click", () => changeQuantity(Number(button.dataset.increase), 1));
+});
+
+cartItems.querySelectorAll("[data-decrease]").forEach(button => {
+button.addEventListener("click", () => changeQuantity(Number(button.dataset.decrease), -1));
+});
+
+cartItems.querySelectorAll("[data-remove]").forEach(button => {
+button.addEventListener("click", () => removeFromCart(Number(button.dataset.remove)));
+});
+}
+
+function changeQuantity(productId, amount) {
+const item = cart.find(product => product.id === productId);
+if (!item) return;
+
+item.quantity += amount;
+if (item.quantity <= 0) {
+removeFromCart(productId);
+} else {
+renderCart();
+}
+}
+
+function removeFromCart(productId) {
+const index = cart.findIndex(product => product.id === productId);
+if (index !== -1) cart.splice(index, 1);
+renderCart();
+}
+
+function openCart() {
+cartPanel.classList.add("open");
+cartPanel.setAttribute("aria-hidden", "false");
+document.body.style.overflow = "hidden";
+}
+
+function closeCart() {
+cartPanel.classList.remove("open");
+cartPanel.setAttribute("aria-hidden", "true");
+document.body.style.overflow = "";
+}
+
+document.getElementById("openCart").addEventListener("click", openCart);
+document.getElementById("closeCart").addEventListener("click", closeCart);
+
+cartPanel.addEventListener("click", event => {
+if (event.target === cartPanel) closeCart();
+});
+
+document.addEventListener("keydown", event => {
+if (event.key === "Escape") closeCart();
+});
+
+function enquireAbout(productId) {
+const product = products.find(item => item.id === productId);
+if (!product) return;
+
+const message = "Hello AVÉRA HAIR! I'm interested in " + product.name +
+" (" + product.category + "). Please share the available lengths, options, price and delivery information.";
+
+window.open(
+"https://wa.me/2347064847605?text=" + encodeURIComponent(message),
+"_blank",
+"noopener"
 );
-menuButton.textContent = isOpen ? "×" : "☰";
+}
+
+document.getElementById("checkoutForm").addEventListener("submit", event => {
+event.preventDefault();
+
+if (cart.length === 0) {
+showToast("Add at least one item to your bag first.");
+return;
+}
+
+const name = document.getElementById("customerName").value.trim();
+const email = document.getElementById("customerEmail").value.trim();
+const country = document.getElementById("customerCountry").value;
+const address = document.getElementById("customerAddress").value.trim();
+const notes = document.getElementById("customerNotes").value.trim();
+
+const orderLines = cart.map(item =>
+"- " + item.name + " (" + item.category + "), quantity: " +
+item.quantity + " — price to be confirmed"
+).join("\n");
+
+const message =
+"Hello AVÉRA HAIR! I'd like to enquire about placing an order.\n\n" +
+"Name: " + name + "\n" +
+"Email: " + email + "\n" +
+"Country: " + country + "\n" +
+"Delivery details: " + (address || "Not provided") + "\n\n" +
+"Items:\n" + orderLines + "\n\n" +
+"Additional requests: " + (notes || "None") + "\n\n" +
+"Please confirm availability, final prices, delivery and payment options.";
+
+const whatsappUrl = "https://wa.me/2347064847605?text=" + encodeURIComponent(message);
+window.open(whatsappUrl, "_blank", "noopener");
 });
 
-navigation.querySelectorAll("a").forEach(link => {
-link.addEventListener("click", () => {
-navigation.classList.remove("open");
-menuButton.setAttribute("aria-expanded", "false");
-menuButton.setAttribute("aria-label", "Open navigation");
-menuButton.textContent = "☰";
-});
-});
-
-document.querySelectorAll("[data-product]").forEach(link => {
-link.addEventListener("click", () => {
-const product = link.dataset.product;
-const email = "shopaverahair@gmail.com";
-const subject = encodeURIComponent(
-"Enquiry about " + product + " | Avéra Hair "
-);
-link.href = "mailto:" + email + "?subject=" + subject;
-});
-});
-
-document.getElementById("year").textContent =
-new Date().getFullYear();
+renderProducts();
+renderCart();
 </script>
 </body>
 </html>
